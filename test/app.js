@@ -14,7 +14,7 @@ $.ajax({
 
 		$('.form-group').on('submit', function(e){
 			e.preventDefault();
-			var pesos_ingresa3 = $('#pesos').val()
+			var pesos_ingresa3 = $('#pesos').val();
 			// 1$US ----> $$Pesos (un_dolar)
 			// X -------> pesos_ingresa3
 			var conversion_dolar = (pesos_ingresa3/un_dolar).toFixed(2);
@@ -29,7 +29,7 @@ $.ajax({
 		$('.form-group_dolar').on('submit', function(e){
 			e.preventDefault();
 			var dolares_ingresa3 = $('#input_dolar').val()
-	
+
 			$('#dolares_ingresados').text('US $'+dolares_ingresa3)
 			$('#conver_pesos').text('CL $'+Math.round(dolares_ingresa3*un_dolar))
 		})
